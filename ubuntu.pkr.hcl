@@ -130,5 +130,9 @@ provisioner "shell" {
     ]
   }
 
-
+  post-processor "compress" {
+    keep_input_artifact = false
+    format              = "zip"
+    output              = "ubuntu18-base-image.zip"
+  }
 }
